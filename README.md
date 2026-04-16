@@ -97,13 +97,13 @@ ANÁLISES DISPONÍVEIS NO DASHBOARD
 VIEWS SQL CRIADAS
 -------------------------------------------------------------
 
-  vw_cidade             → Análise por cidade
-  vw_categoria          → Análise por categoria/subcategoria
-  vw_ranking_clientes   → Ranking de clientes por total gasto
-  vw_percentual_pedidos → Percentual por pedido
-  vw_media_movel        → Média móvel de faturamento
-  vw_acima_media        → Pedidos acima da média
-  vw_descontos          → Desconto médio por categoria
+vw_cidade             → Análise por cidade
+vw_categoria          → Análise por categoria/subcategoria
+vw_ranking_clientes   → Ranking de clientes por total gasto
+vw_percentual_pedidos → Percentual por pedido
+vw_media_movel        → Média móvel de faturamento
+vw_acima_media        → Pedidos acima da média
+vw_descontos          → Desconto médio por categoria
 
 -------------------------------------------------------------
 REQUISITOS
