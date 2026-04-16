@@ -48,16 +48,27 @@ DATASET - COLUNAS
 -------------------------------------------------------------
 
   order_id         → Identificador único do pedido
+  
   customer_id      → Identificador do cliente (1 a 300)
+  
   data_pedido      → Data do pedido (entre 01/01/2023 e 31/12/2023)
+  
   categoria        → Categoria do produto
+  
   subcategoria     → Subcategoria do produto
+  
   preco_unitario   → Preço fixo por subcategoria
+  
   quantidade       → Quantidade de itens (1 a 5)
+  
   desconto_pct     → Desconto aplicado (0%, 5%, 10%, 15% ou 20%)
+  
   status_pedido    → Status: Entregue, Pendente, Cancelado, Em trânsito
+  
   cidade           → Cidade do pedido (5 capitais brasileiras)
+  
   avaliacao        → Nota do cliente de 1 a 5 (somente pedidos Entregues)
+  
   valor_total      → Valor calculado: preço × quantidade × (1 - desconto)
 
 -------------------------------------------------------------
@@ -65,9 +76,13 @@ CATEGORIAS E SUBCATEGORIAS
 -------------------------------------------------------------
 
   Eletrônicos   → Celular (R$1200), Câmera (R$800), Relógio (R$350)
+  
   Roupas        → Blusa (R$80), Short (R$60), Calça (R$120)
+  
   Casa & Jardim → Sofá (R$900), Vaso (R$70), Luminária (R$150)
+  
   Esportes      → Tênis (R$250), Bicicleta (R$1500), Haltere (R$200)
+  
   Livros        → Romance (R$40), Técnico (R$120), Infantil (R$30)
 
 -------------------------------------------------------------
@@ -97,13 +112,19 @@ ANÁLISES DISPONÍVEIS NO DASHBOARD
 VIEWS SQL CRIADAS
 -------------------------------------------------------------
 
-vw_cidade             → Análise por cidade
-vw_categoria          → Análise por categoria/subcategoria
-vw_ranking_clientes   → Ranking de clientes por total gasto
-vw_percentual_pedidos → Percentual por pedido
-vw_media_movel        → Média móvel de faturamento
-vw_acima_media        → Pedidos acima da média
-vw_descontos          → Desconto médio por categoria
+  vw_cidade             → Análise por cidade
+  
+  vw_categoria          → Análise por categoria/subcategoria
+  
+  vw_ranking_clientes   → Ranking de clientes por total gasto
+  
+  vw_percentual_pedidos → Percentual por pedido
+  
+  vw_media_movel        → Média móvel de faturamento
+  
+  vw_acima_media        → Pedidos acima da média
+  
+  vw_descontos          → Desconto médio por categoria
 
 -------------------------------------------------------------
 REQUISITOS
