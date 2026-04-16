@@ -3,6 +3,13 @@ import pandas as pd
 import mysql.connector
 
 
+# - - - - - - README - - - - - -
+
+#Rode o código abaixo no terminal:
+
+#python -m streamlit run dashboard.py
+
+
 # Conexão
 conexao = mysql.connector.connect(
     host="localhost",
@@ -25,7 +32,7 @@ opcao = st.sidebar.selectbox(
         "📍 Cidade",
         "📦 Categoria",
         "🏆 Ranking Clientes",
-        "📊 Percentual Pedidos",
+        "📊 Percentual por Pedido",
         "📈 Média Móvel",
         "📊 Acima da Média",
         "🎯 Descontos",
@@ -85,7 +92,7 @@ elif opcao == "🏆 Ranking Clientes":
     st.dataframe(df)
 
 # Percentual por pedido
-elif opcao == "📊 Percentual por pedido":
+elif opcao == "📊 Percentual por Pedido":
     query = """
     SELECT 
         order_id,
