@@ -10,34 +10,34 @@ n = 1000
 
 # Categorias e subcategorias
 subcategorias_map = {
-    'Eletrônicos':    ['Celular', 'Câmera', 'Relógio'],
-    'Roupas':         ['Blusa', 'Short', 'Calça'],
-    'Casa & Jardim':  ['Sofá', 'Vaso', 'Luminária'],
-    'Esportes':       ['Tênis', 'Bicicleta', 'Haltere'],
-    'Livros':         ['Romance', 'Técnico', 'Infantil'],
+    'Eletronicos':    ['Celular', 'Camera', 'Relogio'],
+    'Roupas':         ['Blusa', 'Short', 'Calca'],
+    'Casa & Jardim':  ['Sofa', 'Vaso', 'Luminaria'],
+    'Esportes':       ['Tenis', 'Bicicleta', 'Haltere'],
+    'Livros':         ['Romance', 'Tecnico', 'Infantil'],
 }
 
 # Preço fixo por subcategoria
 preco_por_subcategoria = {
     'Celular': 1200.00,
-    'Câmera': 800.00,
-    'Relógio': 350.00,
+    'Camera': 800.00,
+    'Relogio': 350.00,
     'Blusa': 80.00,
     'Short': 60.00,
-    'Calça': 120.00,
-    'Sofá': 900.00,
+    'Calca': 120.00,
+    'Sofa': 900.00,
     'Vaso': 70.00,
-    'Luminária': 150.00,
-    'Tênis': 250.00,
+    'Luminaria': 150.00,
+    'Tenis': 250.00,
     'Bicicleta': 1500.00,
     'Haltere': 200.00,
     'Romance': 40.00,
-    'Técnico': 120.00,
+    'Tecnico': 120.00,
     'Infantil': 30.00,
 }
 
-status      = ['Entregue', 'Pendente', 'Cancelado', 'Em trânsito']
-cidades     = ['São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Curitiba', 'Porto Alegre']
+status      = ['Entregue', 'Pendente', 'Cancelado', 'Em transito']
+cidades     = ['Sao Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Curitiba', 'Porto Alegre']
 categorias  = list(subcategorias_map.keys())
 
 # Gerar categoria e subcategoria juntas
@@ -76,7 +76,7 @@ df['valor_total'] = np.round(
     df['preco_unitario'] * df['quantidade'] * (1 - df['desconto_pct'] / 100), 2
 )
 
-df.to_csv('ecom_data.csv', index=False)
+df.to_csv('ecom_data.csv', index=False, encoding='utf-8-sig')
 
 print(df.head(10).to_string())
 print(f"\nShape: {df.shape}")

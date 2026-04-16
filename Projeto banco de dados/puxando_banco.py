@@ -12,9 +12,8 @@ conexao = mysql.connector.connect(
 
 print("Conectado com sucesso!")
 
-# -----------------------------
+
 # 📊 GROUP BY - cidade
-# -----------------------------
 query1 = """
 SELECT 
     cidade,
@@ -30,9 +29,8 @@ df_cidade = pd.read_sql(query1, conexao)
 print(df_cidade.head())
 
 
-# -----------------------------
+
 # 📊 GROUP BY - categoria
-# -----------------------------
 query2 = """
 SELECT 
     categoria,
@@ -46,9 +44,8 @@ ORDER BY faturamento DESC
 df_categoria = pd.read_sql(query2, conexao)
 
 
-# -----------------------------
+
 # 🧠 WINDOW FUNCTION - ranking
-# -----------------------------
 query3 = """
 SELECT 
     customer_id,
@@ -61,9 +58,8 @@ GROUP BY customer_id
 df_ranking = pd.read_sql(query3, conexao)
 
 
-# -----------------------------
+
 # 📊 Percentual do total
-# -----------------------------
 query4 = """
 SELECT 
     order_id,
@@ -76,9 +72,8 @@ FROM ecom_data
 df_percentual = pd.read_sql(query4, conexao)
 
 
-# -----------------------------
+
 # 📈 Média móvel
-# -----------------------------
 query5 = """
 SELECT 
     data_pedido,
@@ -93,9 +88,8 @@ FROM ecom_data
 df_media_movel = pd.read_sql(query5, conexao)
 
 
-# -----------------------------
+
 # 🔗 JOIN com média do cliente
-# -----------------------------
 query6 = """
 SELECT *
 FROM ecom_data e
@@ -110,9 +104,8 @@ WHERE m.media_cliente > 1000
 df_clientes_top = pd.read_sql(query6, conexao)
 
 
-# -----------------------------
+
 # 📊 Subquery (acima da média)
-# -----------------------------
 query7 = """
 SELECT *
 FROM ecom_data
@@ -124,9 +117,8 @@ WHERE valor_total > (
 df_acima_media = pd.read_sql(query7, conexao)
 
 
-# -----------------------------
+
 # 🎯 Desconto médio por categoria
-# -----------------------------
 query8 = """
 SELECT 
     categoria,
@@ -138,9 +130,8 @@ GROUP BY categoria
 df_desconto = pd.read_sql(query8, conexao)
 
 
-# -----------------------------
+
 # 📊 Desconto vs valor
-# -----------------------------
 query9 = """
 SELECT 
     desconto_pct,
