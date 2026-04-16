@@ -5,7 +5,7 @@ import pandas as pd
 conexao = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="bAtata2212!",
+    password="SUA_SENHA_AQUI",
     database="ecom_data",
     charset='utf8mb4'
 )
