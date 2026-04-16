@@ -1,5 +1,6 @@
+===========================
   PROJETO: DASHBOARD ANALÍTICO DE E-COMMERCE
-
+===========================
 
 Projeto desenvolvido como parte do Projeto Desenvolve, com foco
 em análise de dados de uma loja virtual usando Python, MySQL e
