@@ -2,13 +2,9 @@ import mysql.connector
 import pandas as pd
 
 # conexão
-conexao = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="bAtata2212!",
-    database="ecom_data",
-    charset='utf8mb4'
-)
+from sqlalchemy import create_engine
+engine = create_engine("mysql+pymysql://root:bAtata2212!@localhost/ecom_data")
+conexao = engine.connect()
 
 print("Conectado com sucesso!")
 
