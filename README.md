@@ -71,6 +71,8 @@ DATASET - COLUNAS
   
   valor_total      → Valor calculado: preço × quantidade × (1 - desconto)
 
+  Obs: algumas vezes o MySQL gerou o banco de dados com a coluna "order_id" como "ï»¿order_id", é necessário renomear a coluna para "order_id" no MySQL.
+
 -------------------------------------------------------------
 CATEGORIAS E SUBCATEGORIAS
 -------------------------------------------------------------
@@ -125,6 +127,21 @@ VIEWS SQL CRIADAS
   vw_acima_media        → Pedidos acima da média
   
   vw_descontos          → Desconto médio por categoria
+
+-------------------------------------------------------------
+COMO OBTER O PROJETO
+-------------------------------------------------------------
+
+  Clone o repositório para sua máquina local usando o Git:
+
+    git clone https://github.com/seu-usuario/nome-do-repositorio.git
+
+  Em seguida, acesse a pasta do projeto:
+
+    cd nome-do-repositorio
+
+  Obs.: Substitua "seu-usuario" e "nome-do-repositorio" pelo
+  endereço real do repositório no GitHub.
 
 -------------------------------------------------------------
 REQUISITOS
