@@ -157,14 +157,32 @@ REQUISITOS
 CONFIGURAÇÃO DO BANCO DE DADOS
 -------------------------------------------------------------
 
-  1. Certifique-se de ter o MySQL instalado e rodando.
+  1. Instale o MySQL Community Server e o MySQL Workbench:
+       https://dev.mysql.com/downloads/
 
-  2. Crie o banco de dados:
-       CREATE DATABASE ecom_data;
+  2. Configure um servidor local no MySQL Workbench:
+       - Abra o MySQL Workbench e crie uma nova conexão
+         com host "localhost", porta 3306 e usuário "root".
+       - Teste a conexão e salve.
 
-  3. Importe o CSV para a tabela ecom_data no banco.
+  3. Crie o Schema ecom_data:
+       - No MySQL Workbench, clique com o botão direito em
+         "Schemas" no painel esquerdo e selecione
+         "Create Schema...".
+       - Nomeie o schema como: ecom_data
+       - Clique em "Apply" para confirmar.
 
-  4. Ajuste as credenciais de acesso nos arquivos
+  4. Importe o CSV usando o Table Data Import Wizard:
+       - Clique com o botão direito sobre o schema ecom_data
+         e selecione "Table Data Import Wizard".
+       - Selecione o arquivo ecom_data.csv do projeto.
+       - Siga os passos do assistente: escolha criar uma nova
+         tabela chamada "ecom_data", confirme os tipos de
+         coluna detectados automaticamente e clique em "Next"
+         até finalizar a importação.
+       - Lembre-se de checar se as colunas foram importadas corretamente, pois o MySQL pode gerar o banco de dados com a coluna "order_id" como "ï»¿order_id", é necessário renomear a coluna para "order_id" no MySQL.
+
+  5. Ajuste as credenciais de acesso nos arquivos
      puxando_banco.py e dashboard.py:
 
        host     = "localhost"
@@ -172,7 +190,7 @@ CONFIGURAÇÃO DO BANCO DE DADOS
        password = "sua_senha"
        database = "ecom_data"
 
-  5. Execute o script de views SQL (opcional):
+  6. Execute o script de views SQL (opcional):
        Criacao_de_consultas_sql.sql
 
 -------------------------------------------------------------
