@@ -186,8 +186,11 @@ CONFIGURAÇÃO DO BANCO DE DADOS
      puxando_banco.py e dashboard.py:
 
        host     = "localhost"
+
        user     = "root"
+       
        password = "sua_senha"
+       
        database = "ecom_data"
 
   6. Execute o script de views SQL (opcional):
