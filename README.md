@@ -216,5 +216,7 @@ COMO EXECUTAR
 AUTOR
 -------------------------------------------------------------
 
+  Autor: Eduardo Ruiz Rubio
+  
   Projeto desenvolvido como parte do Projeto Desenvolve da cidade de Itabira.
 
