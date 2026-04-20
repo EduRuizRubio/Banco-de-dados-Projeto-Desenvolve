@@ -154,7 +154,7 @@ REQUISITOS
     pip install streamlit pandas mysql-connector-python numpy
 
 -------------------------------------------------------------
-CONFIGURAÇÃO DO BANCO DE DADOS
+CONFIGURAÇÃO DO BANCO DE DADOS (com MySQL)
 -------------------------------------------------------------
 
   1. Instale o MySQL Community Server e o MySQL Workbench:
@@ -197,7 +197,7 @@ CONFIGURAÇÃO DO BANCO DE DADOS
        Criacao_de_consultas_sql.sql
 
 -------------------------------------------------------------
-COMO EXECUTAR
+COMO EXECUTAR (com MySQL)
 -------------------------------------------------------------
 
   1. Gere o dataset (caso necessário):
@@ -207,10 +207,33 @@ COMO EXECUTAR
        python puxando_banco.py
 
   3. Inicie o dashboard:
-       python -m streamlit run dashboard.py
+       python -m streamlit run dashboard_mysql.py
 
      O dashboard abrirá automaticamente no navegador em:
        http://localhost:8501
+
+-------------------------------------------------------------
+COMO EXECUTAR (direto do CSV, sem MySQL)
+-------------------------------------------------------------
+
+  Essa versão não exige instalação do MySQL. Basta ter o
+  arquivo ecom_data.csv na mesma pasta e rodar:
+
+  1. Instale apenas as dependências necessárias:
+       pip install streamlit pandas
+
+  2. Acesse a pasta do projeto:
+       cd "Projeto banco de dados"
+
+  3. Inicie o dashboard:
+       python -m streamlit run dashboard_csv.py
+
+     O dashboard abrirá automaticamente no navegador em:
+       http://localhost:8501
+
+  Obs.: Todas as análises são equivalentes à versão com MySQL,
+  mas os dados são lidos diretamente do arquivo ecom_data.csv
+  usando a biblioteca pandas.
 
 -------------------------------------------------------------
 AUTOR
